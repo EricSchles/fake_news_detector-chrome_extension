@@ -1,0 +1,22 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <script src="/ladda/jquery-3.1.1.min.js"></script>
+    <script src="/ladda/myScript.js"></script> 
+    <script src="/ladda/ladda.min.js"></script> 
+    <script src="/ladda/spin.min.js"></script> 
+	<script>
+		Ladda.bind('.ladda-button', {timeout:2000} );
+	</script>
+  </head>
+  <body>
+      FiB is active
+  </body>
+</html>
+
