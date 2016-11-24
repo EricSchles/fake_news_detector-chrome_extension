@@ -17,13 +17,12 @@ var feeds = new Set();
  * @param the text or url to send to the server.
  */
 
-
-
-function postData(){
+function postData(data){
     alert("got inside function");
-    var server = "http://localhost:5000/get_data"
+    //var server = "http://localhost:5000/send_data" //local testing
+    var server = "https://serene-reef-39081.herokuapp.com/send_data"
     $.post(server, {
-	data: "hello"
+	data: data 
     }, function(data){
     	alert("sent data");
     });    
@@ -43,7 +42,7 @@ function httpGet(input, type, data) {
 
     //debugger;
 	console.log(page);
-
+	postData(page);
 	/*var theUrl = server + contents + page;
 	theUrl = theUrl.replace("&", "^");
 
@@ -93,9 +92,6 @@ function decode(code) {
  *
  */
 setInterval(function() {
-	console.log("whatever");
-    postData();
-    console.log("whatever else");
 	var test = document.getElementsByClassName('_4-u2 mbm _5v3q _4-u8');
 
 	for(var i=0; i<test.length; i++) {
