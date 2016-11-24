@@ -20,7 +20,7 @@ var feeds = new Set();
 function postData(data){
     alert("got inside function");
     //var server = "http://localhost:5000/send_data" //local testing
-    var server = "https://serene-reef-39081.herokuapp.com/send_data"
+    var server = "https://serene-reef-39081.herokuapp.com/send_data";
     $.post(server, {
 	data: data 
     }, function(data){
@@ -30,8 +30,8 @@ function postData(data){
 
 function httpGet(input, type, data) {
 
-    var server = "http://localhost:5000";
-	//"https://fbserve.herokuapp.com/";
+    var server = "https://serene-reef-39081.herokuapp.com/send_data";
+
 	var contents = "?content=";
 	
 	var page;
